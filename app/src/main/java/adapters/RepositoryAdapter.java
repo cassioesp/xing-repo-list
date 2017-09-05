@@ -47,7 +47,7 @@ public class RepositoryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final View view = (convertView != null ? convertView : createView(parent));
+        final View view = createView(parent);
         final GitHubRepoViewHolder viewHolder = (GitHubRepoViewHolder) view.getTag();
         viewHolder.setGitHubRepo(getItem(position));
         return view;
